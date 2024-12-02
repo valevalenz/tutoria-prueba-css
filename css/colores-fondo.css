@@ -1,0 +1,58 @@
+/* body{
+    background-color: blue;
+} */
+
+nav {
+    background-color: white;
+}
+
+.opciones{
+    display:flex;
+    flex-direction:row;
+    list-style: none;
+    align-items: flex-end;
+}
+
+/* pantallas pequeñas */
+
+@media (max-width:767px){
+    body{
+        background-color:darkred;
+    }
+}
+
+/* pantallas medianas */
+
+@media (min-width:767px) and (max-width:1023px){
+  
+    body{
+        background-color: yellow;
+    }
+
+    .opciones{
+        display:none;
+    }
+
+
+
+}
+
+/* pantallas grandes */
+
+@media (min-width:1024px){
+    body{
+        background-color: chocolate;
+    }
+
+    .menu-hamburguesa{
+        display:none;
+    }
+
+}
+
+
+/* extra small <576px 
+small >= 576px
+medium >= 768 px
+large >= 992px
+extra large >= 1200px */

@@ -1,0 +1,139 @@
+/* ejemplo layout */
+body{
+    padding:0;
+    margin:0;
+    width:100%;
+}
+
+
+nav{
+    background-color:black;
+    grid-area:nav;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul{
+        display: flex;
+        }
+
+nav li{
+    padding: 1em;
+    list-style: none;
+    }
+
+nav a{
+    text-decoration: none;
+    color: white;
+    }
+
+nav a:hover{
+    color: yellow;
+    }
+
+.logo-titulo{
+    display:flex;
+    /* align items alinea horizontal y verticalmente */
+   align-items: center;
+}
+
+.logo{
+    width: 60px;
+    height: auto;
+}
+
+
+h1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:16px;
+    font-weight: 100;
+    color:white;
+}
+
+
+
+ul{
+    list-style: none;
+}
+
+/* escondemos el manu de hamburguesa en escritorio */
+.menu-mobile{
+    display:none;
+}
+
+main{
+    background-color:pink;
+    grid-area:main;
+}
+
+footer{
+    background-color:blueviolet;
+    grid-area:footer;
+}
+
+p{
+    background:orange;
+    color:white;
+    padding:10px;
+    margin:10px;
+}
+
+/* ejemplo layout  */
+
+.container-layout{
+    display:grid;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas:
+    'nav nav' 
+    'main main'
+    'footer footer';
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+
+@media screen and (max-width:767px){
+
+    /* layout en dispositivos más pequeños que 767px. No necesitamos volver a nombrar las áreas, solo redistribuir el layout */
+.container-layout{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas:
+    'nav main'
+    'nav main'
+    'footer footer';
+}
+
+/* grilla de productos en dispositivos más pequeños que 767px */
+.grid{
+    display:grid;
+    grid-template-columns:1fr;
+}
+
+nav{
+    display: flex;
+    align-items: flex-start;
+}
+
+.menu-item{
+    display:none;
+}
+
+.menu-right{
+    display:flex;
+}
+
+.menu-mobile{   
+   display:inline-block;
+   width:25px;
+   height: auto;
+   padding:20px;
+   margin:0;
+}
+
+}
